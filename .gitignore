@@ -1,0 +1,6 @@
+.idea
+tmp
+file-connector/data/camel-file-kafka-connector/**
+!file-connector/data/camel-file-kafka-connector/.gitkeep
+jdbc-connector/data/confluentinc-kafka-connect-jdbc-10.8.4/**
+!jdbc-connector/data/confluentinc-kafka-connect-jdbc-10.8.4/.gitkeep

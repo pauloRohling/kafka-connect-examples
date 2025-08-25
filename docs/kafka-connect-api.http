@@ -1,0 +1,42 @@
+### Get cluster information
+GET http://localhost:8083
+Accept: application/json
+
+### List connectors
+GET http://localhost:8083/connectors
+Accept: application/json
+
+### List connector plugins
+GET http://localhost:8083/connector-plugins
+Accept: application/json
+
+### Create connector
+POST http://localhost:8083/connectors
+Content-Type: application/json
+Accept: application/json
+
+{
+  "name": "postgres-source-connector",
+  "config": {
+    "connector.class": "org.apache.kafka.connect.file.FileStreamSourceConnector",
+    "tasks.max": "1",
+    "file": "/tmp/test.txt",
+    "topic": "test-topic"
+  }
+}
+
+### Get connector configuration
+GET http://localhost:8083/connectors/postgres-source-connector
+Accept: application/json
+
+### Get connector status
+GET http://localhost:8083/connectors/postgres-source-connector/status
+Accept: application/json
+
+### Restart connector
+POST http://localhost:8083/connectors/postgres-source-connector/restart
+Accept: application/json
+
+### Delete connector
+DELETE http://localhost:8083/connectors/postgres-source-connector
+Accept: application/json
