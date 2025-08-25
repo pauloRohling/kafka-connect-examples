@@ -20,7 +20,7 @@ It is important to notice that the PostgreSQL database is initialized with a sam
 
 ## Configuring the JDBC Source Connector
 
-To configure the JDBC Source connector, you can use the [create-connectors.http](create-connectors.http) file. We are using the `mode` as `incrementing` with the `incrementing.column.name` set to `id`, which ensures that only new rows are fetched based on the incrementing `id` column. Below are some points to consider:
+To configure the JDBC Source connector, you can use the [create-source-connector.http](create-source-connectors.http) file. We are using the `mode` as `incrementing` with the `incrementing.column.name` set to `id`, which ensures that only new rows are fetched based on the incrementing `id` column. Below are some points to consider:
 
 ### Using Primary Key as Kafka Message Key
 
@@ -48,3 +48,7 @@ When working with schemas in JDBC connectors, it's important to configure the Sc
   "value.converter.schema.registry.url": "http://schema-registry:8081"
 }
 ```
+
+## Configuring the JDBC Sink Connector
+
+To configure the JDBC Sink connector, you can use the [create-sink-connector.http](create-sink-connector.http) file.
