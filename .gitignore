@@ -1,6 +1,12 @@
 .idea
 tmp
+file-connector/data/confluentinc-kafka-connect-spooldir-2.0.70/**
+!file-connector/data/confluentinc-kafka-connect-spooldir-2.0.70/.gitkeep
 file-connector/data/camel-file-kafka-connector/**
 !file-connector/data/camel-file-kafka-connector/.gitkeep
+file-connector/data/output/**
+!file-connector/data/output/.gitkeep
+file-connector/data/error/**
+!file-connector/data/error/.gitkeep
 jdbc-connector/data/confluentinc-kafka-connect-jdbc-10.8.4/**
 !jdbc-connector/data/confluentinc-kafka-connect-jdbc-10.8.4/.gitkeep

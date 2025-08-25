@@ -16,7 +16,7 @@ Content-Type: application/json
 Accept: application/json
 
 {
-  "name": "postgres-source-connector",
+  "name": "file-source-connector",
   "config": {
     "connector.class": "org.apache.kafka.connect.file.FileStreamSourceConnector",
     "tasks.max": "1",
@@ -26,17 +26,17 @@ Accept: application/json
 }
 
 ### Get connector configuration
-GET http://localhost:8083/connectors/postgres-source-connector
+GET http://localhost:8083/connectors/file-source-connector
 Accept: application/json
 
 ### Get connector status
-GET http://localhost:8083/connectors/postgres-source-connector/status
+GET http://localhost:8083/connectors/file-source-connector/status
 Accept: application/json
 
 ### Restart connector
-POST http://localhost:8083/connectors/postgres-source-connector/restart
+POST http://localhost:8083/connectors/file-source-connector/restart
 Accept: application/json
 
 ### Delete connector
-DELETE http://localhost:8083/connectors/postgres-source-connector
+DELETE http://localhost:8083/connectors/file-source-connector
 Accept: application/json
