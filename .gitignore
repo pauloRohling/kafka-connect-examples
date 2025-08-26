@@ -10,3 +10,5 @@ file-connector/data/error/**
 !file-connector/data/error/.gitkeep
 jdbc-connector/data/confluentinc-kafka-connect-jdbc-10.8.4/**
 !jdbc-connector/data/confluentinc-kafka-connect-jdbc-10.8.4/.gitkeep
+datagen-connector/data/confluentinc-kafka-connect-datagen-0.6.7/**
+!datagen-connector/data/confluentinc-kafka-connect-datagen-0.6.7/.gitkeep

@@ -1,0 +1,19 @@
+### Create source connector
+POST http://localhost:8083/connectors
+Content-Type: application/json
+Accept: application/json
+
+{
+  "name": "datagen-source-connector",
+  "config": {
+    "connector.class": "io.confluent.kafka.connect.datagen.DatagenConnector",
+    "tasks.max": "1",
+    "key.converter": "org.apache.kafka.connect.storage.StringConverter",
+    "value.converter": "io.confluent.connect.avro.AvroConverter",
+    "value.converter.schema.registry.url": "http://schema-registry:8081",
+    "kafka.topic": "credit-cards-topic",
+    "max.interval": 500,
+    "schema.filename": "/data/schemas/credit-cards.avsc",
+    "schema.keyfield": "card_id"
+  }
+}
