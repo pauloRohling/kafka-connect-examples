@@ -16,6 +16,21 @@ A Docker Compose file is provided to set up the necessary services. You can star
 docker-compose up -d
 ```
 
+## Creating the necessary topic
+
+This project requires one Kafka topic. You can create it using the following CLI commands:
+
+> ⚠️ Make sure your Kafka broker is running on localhost:9092. Adjust the --bootstrap-server parameter if needed.
+
+```bash
+    kafka-topics \
+    --bootstrap-server localhost:9092 \
+    --create \
+    --topic credit-cards-topic \
+    --replication-factor 1 \
+    --partitions 3
+```
+
 ## Configuring the Datagen Source Connector
 
 To configure the Datagen Source connector, you can use the [create-source-connector.http](create-source-connector.http) file.
